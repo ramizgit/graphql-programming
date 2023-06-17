@@ -12,6 +12,11 @@ public class BookController {
         return Book.getById(id);
     }
 
+    @QueryMapping
+    public Author authorById(@Argument String id){
+        return Author.getById(id);
+    }
+
     @SchemaMapping
     public Author author(Book book) {
         return Author.getById(book.getAuthorId());
